@@ -38,24 +38,24 @@ const OTPValidation = () => {
     <Navbar />
     <div className="container d-flex justify-content-center">
       <div className="col-md-6">
-        <h2 className="mt-5">Checkout Form</h2>
-        <p>You will receive your payment receipt after this;</p>
-        <p>Enter the correct OTP code sent to you</p>
+        <h2 className="mt-5">Formulario de Pago</h2>
+        <p>Recibirá su recibo de pago después de esto;</p>
+        <p>Ingrese el código OTP correcto que se le envió</p>
         <form onSubmit={handleOtpSubmit}>
           <div className="form-group">
             <input
             //   type="text"
               className="form-control"
-              placeholder="Enter OTP"
+              placeholder="Ingrese la OTP"
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary mt-3">NEXT</button>
+          <button type="submit" className="btn btn-primary mt-3">PRÓXIMO</button>
         </form>
-        <p className="mt-3">You will receive your code shortly</p>
-        <p class="fs-5">Your payment receipt is what you will use to get your exam form</p>
+        <p className="mt-3">Recibirás tu código en breve</p>
+        <p class="fs-5">Su recibo de pago es lo que utilizará para obtener su formulario de examen</p>
       </div>
     </div>
     <Footer />

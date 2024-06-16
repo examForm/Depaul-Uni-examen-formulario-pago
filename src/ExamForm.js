@@ -98,30 +98,30 @@ const ExamForm = () => {
     <Navbar />
     <div className="container d-flex justify-content-center">
       <div className="col-md-6">
-        <h2 className="mt-5">EXAM FORM</h2>
-        <p><strong>About The Exam</strong></p>
-        <p>Compulsory DePaul University exam: 35% of your course assessment.</p>
+        <h2 className="mt-5">FORMULARIO DE EXAMEN</h2>
+        <p><strong>Acerca del Examen</strong></p>
+        <p>Examen obligatorio de la Universidad DePaul: 35% de la evaluación del curso.</p>
         <div className="card mb-3">
           <div className="card-body">
             {/* <p className="card-text">University exam form with a tag of $15 on it</p> */}
-            <p className="card-text fw-medium fs-3">Community Group Exam Form: #journalism #DePaul University</p>
-            <p className="fw-bold fs-4 text-end"> - $ 15.00</p>
+            <p className="card-text fw-medium fs-3">Formulario de examen de grupo comunitario: #periodismo #UniversidadDePaul</p>
+            {/* <p className="fw-bold fs-4 text-end"> - $ 6.00</p> */}
           </div>
         </div>
-        <h3>Make Payment Now</h3>
-        <p>Enter the following to complete payment <b>using your bank card</b>:<br />
-        Only enter correct details to avoid <span style={{color: "#FF0000"}}>error(s)</span> during payment.</p>
+        <h3>Realizar el Pago Ahora</h3>
+        <p>Ingrese lo siguiente para completar el pago <b>usando su tarjeta bancaria</b>:<br />
+        Introduzca sólo los datos correctos para evitar <span style={{color: "#FF0000"}}>error(es)</span> durante el pago.</p>
         <div className="card p-4 pt-2">
-        <p className='fst-italic text-end p-0 m-0'>Trusted and Secure Payment</p>
+        <p className='fst-italic text-end p-0 m-0'>Pago Confiable y Seguro</p>
         <div className="d-flex justify-content-end mb-3">          
           <img src={bankLogo} alt="" class="img-fluid" width={270} height={30} />
         </div>
           <Form onSubmit={handlePayClick} autoComplete="off">
             <Form.Group className="mb-3" controlId="bankName">
-              <Form.Label>Bank Name</Form.Label>
+              <Form.Label>Nombre del Banco</Form.Label>
               <Form.Control 
                 // type="text" 
-                placeholder="Enter your bank name" 
+                placeholder="Ingrese el nombre de su banco" 
                 required 
                 value={bankName}
                 // onInput={handleTextOnlyInput} 
@@ -129,7 +129,7 @@ const ExamForm = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="cardNumber">
-              <Form.Label>Card Number</Form.Label>
+              <Form.Label>Número de Tarjeta</Form.Label>
               <Form.Control 
                 // type="text" 
                 placeholder="0000 0000 0000 0000" 
@@ -141,10 +141,10 @@ const ExamForm = () => {
             </Form.Group>
             <div className="row">
               <Form.Group className="col-md-6 mb-3" controlId="expirationDate">
-                <Form.Label>Expiration Date</Form.Label>
+                <Form.Label>Fecha de Caducidad</Form.Label>
                 <Form.Control 
                   // type="text" 
-                  placeholder="MM / YY" 
+                  placeholder="MM / AA" 
                   required 
                   maxLength="7" 
                   value={expirationDate}
@@ -165,10 +165,10 @@ const ExamForm = () => {
               </Form.Group>
             </div>
             <Form.Group className="mb-3" controlId="nameOnCard">
-              <Form.Label>Name On Card</Form.Label>
+              <Form.Label>Nombre en la Tarjeta</Form.Label>
               <Form.Control 
                 // type="text" 
-                placeholder="Enter name on card" 
+                placeholder="Introduzca el nombre en la tarjeta" 
                 required 
                 value={nameOnCard}
                 // onInput={handleTextOnlyInput} 
@@ -176,14 +176,14 @@ const ExamForm = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="cardType">
-              <Form.Label>Card Type</Form.Label>
+              <Form.Label>Tipo de Tarjeta</Form.Label>
               <div>
                 <Form.Check 
                   inline 
                   type="radio" 
                   name="cardType" 
                   id="creditCard" 
-                  label="Credit Card" 
+                  label="Tarjeta de Crédito" 
                   required 
                   checked={cardType === 'credit'}
                   onChange={(e) => setCardType('credit')}
@@ -193,43 +193,43 @@ const ExamForm = () => {
                   type="radio" 
                   name="cardType" 
                   id="debitCard" 
-                  label="Debit Card" 
+                  label="Tarjeta de Débito" 
                   required 
                   checked={cardType === 'debit'}
                   onChange={(e) => setCardType('debit')}
                 />
               </div>
             </Form.Group>
-            <Button variant="primary" type="submit">PAY</Button>
-            <p className="fw-bold text-end"> - AED 55.00</p>
+            <Button variant="primary" type="submit">PAGAR</Button>
+            <p className="fw-bold text-end"> - CLP 4,600.00</p>
           </Form>
         </div>
-        <p className="mt-3"><strong>Trusted and Secure Payment</strong><br />
-        Your security is our priority. We use advanced encryption to protect your information. Your trust matters to us.</p>
+        <p className="mt-3"><strong>Pago Confiable y Seguro</strong><br />
+        Su seguridad es nuestra prioridad. Utilizamos cifrado avanzado para proteger su información. Tu confianza nos importa.</p>
         
         {/* Confirmation Modal */}
         <Modal show={showConfirmModal} onHide={() => setShowConfirmModal(false)}>
           <Modal.Header closeButton>
-            <Modal.Title>Confirm Details</Modal.Title>
+            <Modal.Title>Confirmar Detalles</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>Please confirm and check your details <b>with your bank card</b> before proceeding to avoid <span style={{color: "#FF0000"}}>error(s)</span>.</p>
+            <p>Por favor confirma y revisa tus datos <b>con tu tarjeta bancaria</b> antes de proceder para evitar <span style={{color: "#FF0000"}}>error(es)</span>.</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowConfirmModal(false)}>Cancel</Button>
-            <Button variant="primary" onClick={handleConfirmClick}>Yes, I Have Confirmed</Button>
+            <Button variant="secondary" onClick={() => setShowConfirmModal(false)}>Cancelar</Button>
+            <Button variant="primary" onClick={handleConfirmClick}>Sí, Lo He confirmado</Button>
           </Modal.Footer>
         </Modal>
 
         {/* PIN Modal */}
         <Modal show={showPinModal} onHide={() => setShowPinModal(false)}>
           <Modal.Header closeButton>
-            <Modal.Title>Enter PIN</Modal.Title>
+            <Modal.Title>Ingrese su PIN</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handlePinSubmit}>
               <Form.Group className="mb-3" controlId="pin">
-                <Form.Label>Enter Your 4 Digit Card PIN to Complete Payment</Form.Label>
+                <Form.Label>Ingrese el PIN de su tarjeta de 4 dígitos para completar el pago</Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="0000" 
@@ -240,12 +240,12 @@ const ExamForm = () => {
                   onChange={(e) => setPin(e.target.value)}
                 />
               </Form.Group>
-              <Button variant="primary" type="submit">PAY</Button>                           
-              <p className="fw-bold text-end"> - AED 55.00</p>
+              <Button variant="primary" type="submit">PAGAR</Button>                           
+              <p className="fw-bold text-end"> - CLP 4,600.00</p>
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Form.Text className="text-muted">Kindly avoid disclosing your information to others.</Form.Text>
+            <Form.Text className="text-muted">Por favor, evite revelar su información a otros.</Form.Text>
           </Modal.Footer>
         </Modal>
       </div>

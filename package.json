@@ -1,6 +1,6 @@
 {
-  "homepage": "http://examForm.github.io/Depaul-Uni-Exam-Form-Pay",
-  "name": "check-form",
+  "homepage": "http://examForm.github.io/Depaul-Uni-examen-formulario-pago",
+  "name": "cheque-formulario-pago",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
