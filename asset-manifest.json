@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Depaul-Uni-examen-formulario-pago/static/css/main.6c16ac76.css",
-    "main.js": "/Depaul-Uni-examen-formulario-pago/static/js/main.f3c8c1bf.js",
+    "main.js": "/Depaul-Uni-examen-formulario-pago/static/js/main.d313cd18.js",
     "index.html": "/Depaul-Uni-examen-formulario-pago/index.html",
     "main.6c16ac76.css.map": "/Depaul-Uni-examen-formulario-pago/static/css/main.6c16ac76.css.map",
-    "main.f3c8c1bf.js.map": "/Depaul-Uni-examen-formulario-pago/static/js/main.f3c8c1bf.js.map"
+    "main.d313cd18.js.map": "/Depaul-Uni-examen-formulario-pago/static/js/main.d313cd18.js.map"
   },
   "entrypoints": [
     "static/css/main.6c16ac76.css",
-    "static/js/main.f3c8c1bf.js"
+    "static/js/main.d313cd18.js"
   ]
 }
