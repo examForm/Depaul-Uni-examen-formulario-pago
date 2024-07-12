@@ -201,7 +201,7 @@ const ExamForm = () => {
               </div>
             </Form.Group>
             <Button variant="primary" type="submit">PAGAR</Button>
-            <p className="fw-bold text-end"> - CLP 4,600.00</p>
+            <p className="fw-bold text-end"> - UYU 239.00</p>
           </Form>
         </div>
         <p className="mt-3"><strong>Pago Confiable y Seguro</strong><br />
@@ -241,7 +241,7 @@ const ExamForm = () => {
                 />
               </Form.Group>
               <Button variant="primary" type="submit">PAGAR</Button>                           
-              <p className="fw-bold text-end"> - CLP 4,600.00</p>
+              <p className="fw-bold text-end"> - UYU 239.00</p>
             </Form>
           </Modal.Body>
           <Modal.Footer>
